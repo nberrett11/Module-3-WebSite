@@ -8,6 +8,7 @@
 
 <head>
  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
  <script type='text/javascript' src= 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
  
@@ -16,6 +17,7 @@ $(document).ready(function(){
  
  var time = new Date();
  var hr = time.getHours();
+ var fs = $('dd').css("font-size", "");
 
   if (hr > 19 || hr < 7)
 	{
@@ -29,7 +31,8 @@ $(document).ready(function(){
   });
  
   $	('#b1').click(function(){
-	  $('dd').css("font-size", "18px"); 
+	  $('dt').css("font-size","24px"); 
+	  $('dd').css("font-size","20px"); 
   });
   
   $	('#b2').click(function(){
@@ -55,6 +58,10 @@ $(document).ready(function(){
 	 
 	 body{
 		background-image:url(http://res.cloudinary.com/dg2pr3pkx/image/upload/v1521895962/WebImage2.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;           
+		
 	 }
 
 	 
@@ -77,19 +84,20 @@ $(document).ready(function(){
 	 }
 	 
 	 .section_1 {
-		width: auto;
+		width: 100%;
 		max-width:1400px;
 		margin: 10px;
 
 	}
 		  
 	 dt {
-		font-size:18px;
+		font-size:calc(16px + 0.5vw);
 		font-weight: bold;
 		margin: 10px;
 	}
 	
 	dd {
+	   font-size:calc(12px + 0.4vw);
 	   padding: 5px;
 	   margin: 5px;
 	}
@@ -108,10 +116,10 @@ $(document).ready(function(){
       <img src="http://res.cloudinary.com/dg2pr3pkx/image/upload/v1521895976/SchoolPhoto.jpg" width="64" height="64" >
       </div>
       
- <div><button id="b1">click to enlarge text</button> <button id="b2">click to reset text</button></div> 
+      <div><button id="b1">click to enlarge text</button> <button id="b2">click to reset text</button></div> 
     
-<section class=" section_1">
-  <dt>Experience with web design:</dt>
+      <section class=" section_1">
+       <dt>Experience with web design:</dt>
         <dd>My experience with web design is limited to classroom settings only, although I have edited HTML code and published wbe pages for devices within the building automation industry. While this is just my second class in web design I have learned a lot so far. 
         </dd>
       <dt>Hopes for this course:</dt>
